@@ -4,7 +4,7 @@
 autoload -Uz colors
 colors
 PROMPT=$'%{\e[38;5;50m%}%n%{\e[m%}%{\e[38;5;226m%}@%m%{\e[m%} %{\e[38;5;45m%}[%D]%{\e[m%} %{\e[38;5;201m%}{%*}%{\e[m%} %{\e[38;5;208m%}(%~)%{\e[m%}
-%(?.%{\e[38;5;46m%}.%{\e[38;5;9m%})%(?![(*^o^*)✧Success✧]$ ![(*;ω;*%)✦Fuck You✦]$ )%{\e[m%}'
+%(?.%{\e[38;5;46m%}.%{\e[38;5;9m%})%(?!$ !$ )%{\e[m%}'
 #RPROMPT=$'%{\e[38;5;249m%}[%~]%{\e[m%}'
 setopt histignorealldups sharehistory
 

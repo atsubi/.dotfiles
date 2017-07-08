@@ -61,7 +61,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (nlinum))))
+ '(package-selected-packages (quote (web-mode go-eldoc go-mode nlinum))))
 
 
 ;;; markdown
@@ -70,3 +70,7 @@
 ;;; markdown preview
 ;; browser
 (setq markdown-command "~/.emacs.d/Markdown.pl")
+
+
+;; for go language
+(add-to-list 'exec-path (expand-file-name "/Users/username/go/bin"))

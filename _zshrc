@@ -65,3 +65,8 @@ setopt hist_ignore_space
 setopt hist_reduce_blanks
 setopt extended_glob
 bindkey '^R' history-incremental-pattern-search-backward
+
+export PATH=$PATH:~/bin
+export GOROOT="C:/cygwin64/home/wisem/go"
+export PATH=$PATH:$HOME/go/bin
+export GOPATH="C:/cygwin64/home/wisem/code/gowork"

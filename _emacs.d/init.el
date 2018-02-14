@@ -15,12 +15,10 @@
 (add-to-load-path "~/.emacs.d/auto-complete")
 (add-to-load-path "~/.emacs.d/elpa")
 
-
 ;; auto-complete
 (require 'auto-complete)
 (require 'auto-complete-config)    ; 必須ではないですが一応
 (global-auto-complete-mode t)
-
 
 ;; line number configuration
 (require 'linum)
@@ -32,7 +30,6 @@
 (show-paren-mode t)                       ;; 対応する括弧をハイライト
 (setq show-paren-style 'mixed)            ;; 括弧のハイライトの設定。
 (transient-mark-mode t)                   ;; 選択範囲をハイライト
-
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -50,7 +47,6 @@
 ;;; .#*いらない
 (setq auto-save-default nil)
 
-
 ;;; package
 (require 'package)
 (add-to-list 'package-archives
@@ -65,17 +61,23 @@
    (quote
     (package-utils yaml-mode web-mode go-eldoc go-mode nlinum))))
 
-
 ;;; markdown
 (autoload 'markdown-mode "~/.emacs.d/markdown-mode.el" "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 ;;; markdown preview
+
 ;; browser
 (setq markdown-command "~/.emacs.d/Markdown.pl")
 
-
 ;; for go language
 (add-to-list 'exec-path (expand-file-name "/Users/username/go/bin"))
+
+;; for php language
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(fset 'package-desc-vers 'package--ac-desc-version)
+(package-initialise)
 
 ;; for yaml-mode
 (require 'yaml-mode)
